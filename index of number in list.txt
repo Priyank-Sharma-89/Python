@@ -1,0 +1,8 @@
+num = [3,4,1,2,5,6,9,8,7]
+
+n = int(input('Enter number to search: '))
+
+for i in num:
+    if n == num[i]:
+        print(f'Your number {n} is at position {i+1}')
+        break

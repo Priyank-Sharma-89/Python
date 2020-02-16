@@ -1,0 +1,9 @@
+unit = int(input('Do you want to enter weight in KG or pounds?\n Press 1 for KG             Press 2 for pounds\n> '))
+weight = int(input('Enter your weight: '))
+
+if unit == 1:
+    converted = weight*2.205
+    print(f'Your weight is {converted} pounds')
+elif unit == 2:
+    converted = weight/2.205
+    print(f'Your weight is {converted} Kg')

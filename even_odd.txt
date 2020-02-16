@@ -1,0 +1,19 @@
+evens = []
+odds = []
+even_count = 0
+odd_count = 0
+
+n = int(input('How many numbers you want to enter: '))
+print('Start entering numbers: ')
+
+for i in range(n):
+    num = int(input('Enter : '))
+    if num%2 == 0:
+        even_count += 1
+        evens.append(num)
+    else:
+        odd_count += 1
+        odds.append(num)
+
+print(f'Even = {even_count} {evens} || Odd = {odd_count} {odds}')
+

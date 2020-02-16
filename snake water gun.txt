@@ -1,0 +1,40 @@
+import random
+
+lst = ['S','W','G']
+
+game_count = 0
+cpu_count = 0
+player_count = 0
+
+while game_count<5:
+    game_count += 1
+    cpu = random.choice(lst)
+    player = input('S W or G??\n> ')
+    if (cpu == 'S' and player == 's') or (cpu == 'W' and player == 'w') or (cpu == 'G' and player == 'g'):
+        print('Same same! No count. Next turn')
+        continue
+    elif player == 's' and cpu == 'W':
+        print('You win!!')
+        player_count += 1
+    elif player == 'w' and cpu == 'G':
+        print('You win!!')
+        player_count += 1
+    elif player == 'g' and cpu == 'S':
+        print('You win!!')
+        player_count += 1
+    elif player == 's' and cpu == 'G':
+        print('You loose!!')
+        cpu_count += 1
+    elif player == 'w' and cpu == 'S':
+        print('You loose!!')
+        cpu_count += 1
+    elif player == 'g' and cpu == 'W':
+        print('You loose!!')
+        cpu_count += 1
+
+print('Match results\n')
+print(f'CPU score = {cpu_count}  ||  Your score = {player_count}')
+if cpu_count > player_count:
+    print('You lost the match')
+else:
+    print('You won the match')

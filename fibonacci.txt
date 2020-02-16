@@ -1,0 +1,7 @@
+x,y,z = 0,1,0
+
+for i in range(6):
+    z = x+y
+    print(z)
+    x = y
+    y = z

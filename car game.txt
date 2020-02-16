@@ -1,0 +1,12 @@
+choice = 0
+print('Press 1 to start car\nPress 2 to stop car\nPress 3 to exit\n> ')
+while choice != 3:
+    choice = int(input())
+
+    if choice == 1:
+        print('Car started!')
+    elif choice == 2:
+        print('Car stopped')
+    elif choice == 3:
+        print('Exiting game')
+        break

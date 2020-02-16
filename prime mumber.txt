@@ -1,0 +1,9 @@
+# for efficiency of program, we have to break the loop to avoid 500 iterations
+# post 22 iterations, if we don't break the loop, it does unwanted 477 iterations
+# and increases cpu cycle
+
+for i in range(1,500):
+    if i**2 <= 500:
+        print(f'Square of {i} = {i**2}')
+    else:
+        break
